@@ -16,7 +16,8 @@ let ghosts = [
     { name: 'Belinda', hp: 4 }
 ];
 
-ghosts.length = 10;
+
+
 
 
 // set event listeners 
@@ -41,14 +42,17 @@ form.addEventListener('submit', (e) => {
     };
 
   //     Add that object to the array of goblins in state
-    
-
     if (data.get('ghost-name') !== '') {
         ghosts.push(newGhost);
     }
 
+    if (ghosts.length > 6) {
+        ghosts.shift();
+    }
+
     // display new ghosts in the DOM
     displayGhosts();
+
   
 });
 
