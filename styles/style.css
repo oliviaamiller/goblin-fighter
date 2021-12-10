@@ -64,6 +64,7 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-top: 20px;
 }
 
 .ghost-side button {
@@ -97,6 +98,7 @@ form {
     display: inline-flex;
     width: 30%;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .ghost-hp {
