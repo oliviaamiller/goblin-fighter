@@ -85,7 +85,7 @@ form {
 }
 
 .ghost-img {
-    width: 17%;
+    width: 80%;
     height: auto;
     cursor: pointer;
 }
@@ -95,6 +95,7 @@ form {
     font-family: cursive;
     font-size: 16px;
     display: inline-flex;
+    width: 30%
 }
 
 .ghost-hp {
