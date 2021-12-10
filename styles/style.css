@@ -1,9 +1,11 @@
 body {
     background-image: url(../assets/tree.png);
-    background-size: contain;
+    background-size: 85%;
     background-color: darkslategrey;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
+    
     
 }
 
@@ -37,14 +39,6 @@ main {
     
 }
 
-
-.dog p {
-    background-color: darkslateblue;
-    border-radius: 15px;
-    padding: 20px
-
-}
-
 .ghost-side {
     width: 50%;
     display: flex;
@@ -54,7 +48,6 @@ main {
     align-items: center;
 }
 
-
 .ghost-img {
     width: 17%;
     height: auto;
@@ -62,5 +55,9 @@ main {
 }
 
 .player-data {
+    color: gainsboro;
+}
+
+.ghost-div {
     color: gainsboro;
 }
