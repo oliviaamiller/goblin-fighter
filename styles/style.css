@@ -85,8 +85,10 @@ form {
 
 .ghost-div {
     color: gainsboro;
+    font-family: cursive;
+    font-size: 16px;
 }
 
 .poof {
-    cursor: none;
+    pointer-events: none;
 }

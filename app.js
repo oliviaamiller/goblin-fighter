@@ -81,6 +81,7 @@ function displayGhosts() {
 
                 if (ghost.hp === 0) {
                     defeatedGhostsCount++;
+                    eachGhost.removeAttribute('disabled');
                 }
 
                 dogHPEl.textContent = playerHP;
