@@ -20,15 +20,9 @@ let ghosts = [
     { 
         name: 'Belinda', 
         hp: 4,
-        strength: 3 
+        strength: 2
     }
 ];
-
-
-
-
-
-
 
 // set event listeners 
   // get user input
@@ -48,7 +42,8 @@ form.addEventListener('submit', (e) => {
   //     Make a new goblin object with that user input
     const newGhost = {
         name: ghostName,
-        hp: 3
+        hp: 3,
+        strength: Math.ceil(Math.random() * 3)
     };
 
   //     Add that object to the array of goblins in state
@@ -86,7 +81,17 @@ function displayGhosts() {
                 }
 
                 if (Math.random() < .4) {
-                    playerHP--;
+                    if (ghost.strength === 2) {
+                        playerHP -= 2;
+                    }
+    
+                    if (ghost.strength === 3) {
+                        playerHP -= 3;
+                    }
+    
+                    if (ghost.strength === 1) {
+                        playerHP --;
+                    }
                     alert(`You got spooked by ${ghost.name}!`);
                 } else {
                     alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
@@ -102,6 +107,8 @@ function displayGhosts() {
                     defeatedGhostsCount++;
                     eachGhost.removeAttribute('disabled');
                 }
+
+                
 
                 dogHPEl.textContent = playerHP;
                 defeatedNumEl.textContent = defeatedGhostsCount;
