@@ -8,8 +8,6 @@ const ghostsEl = document.querySelector('.ghosts');
 const form = document.querySelector('form');
 
 
-
-
 // let state
 let defeatedGhostsCount = 0;
 let playerHP = 10;
@@ -41,7 +39,11 @@ form.addEventListener('submit', (e) => {
     };
 
   //     Add that object to the array of goblins in state
-    ghosts.push(newGhost);
+    
+
+    if (data.get('ghost-name') !== '') {
+        ghosts.push(newGhost);
+    }
 
     // display new ghosts in the DOM
     displayGhosts();
