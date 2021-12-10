@@ -3,13 +3,20 @@ const defeatedNumEl = document.querySelector('#defeated-number');
 const defeatedListEl = document.querySelector('.defeated-list');
 const dogImgEl = document.querySelector('#dog-img');
 const dogHPEl = document.querySelector('#dog-hp');
-const ghostListEl = document.querySelector('.ghosts');
+const ghostsEl = document.querySelector('.ghosts');
 const form = document.querySelector('form');
 
 
 
 
 // let state
+let defeatedGhostsCount = 0;
+let playerHP = 10;
+let ghosts = [
+    { name: 'Ron', hp: 2 },
+    { name: 'Belinda', hp: 4 }
+];
+
 
 // set event listeners 
   // get user input
@@ -17,14 +24,81 @@ const form = document.querySelector('form');
   // update DOM to reflect the new state
 
 
-function displayDog() {
-// write this function 
+  // - New goblin form
+  //  On Submit . . .
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  // User has supplied a name and submitted the form
+    const data = new FormData(form);
 
-}
+    const ghostName = data.get('ghost-name');
+
+  //     Make a new goblin object with that user input
+    const newGhost = {
+        name: ghostName,
+        hp: 3
+    };
+
+  //     Add that object to the array of goblins in state
+    ghosts.push(newGhost);
+
+    // display new ghosts in the DOM
+    displayGhosts();
+  
+});
+
+//     "update a list"
+  //     clear out the list DOM
+  //     loop through the goblins
+  //     render a new goblin DOM element for each item
+  //     append that element to the HTML
+
+
+
 
 function displayGhosts() {
-// write this function
+// clear out the ghosts in DOM 
+    ghostsEl.textContent = '';
+
+// loop through the ghosts
+    for (let ghost of ghosts) {
+
+        const eachGhost = renderGhost(ghost);
+
+        if (ghost.hp > 0) {
+            eachGhost.addEventListener('click', () => {
+                if (Math.random() < .4) { 
+                    ghost.hp--;
+                    alert(`You zapped ${ghost.name}!`);
+                } else {
+                    alert(`You tried to strike ${ghost.name} but missed, try again!`);
+                }
+
+                if (Math.random() < .6) {
+                    playerHP--;
+                    alert(`You got spooked by ${ghost.name}!`);
+                } else {
+                    alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
+                }
+
+                if (playerHP === 0) {
+                    dogImgEl.classList.add('game-over');
+                    alert('GAME OVER :(');
+                }
+
+                dogHPEl.textContent = playerHP;
+                defeatedNumEl.textContent = defeatedGhostsCount;
+
+                displayGhosts();
+            });
+
+        }
+
+        ghostsEl.append(eachGhost);
+       
+    }
+
 }
 
-displayDog();
+
 displayGhosts();
