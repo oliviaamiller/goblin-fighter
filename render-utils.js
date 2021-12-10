@@ -10,9 +10,10 @@ export function renderGhost(ghost) {
     ghostImgEl.classList.add('ghost-img');
     ghostHPEl.classList.add('ghost-hp');
 
-    const ghostDataEl = ((ghostNameEl.textContent = ghost.name) + (ghostHPEl.textContent = ghost.hp));
+    ghostNameEl.textContent = ghost.name;
+    ghostHPEl.textContent = ghost.hp;
 
- 
+
 
     if (ghost.hp === 0) {
         ghostImgEl.src = '../assets/poof.png';
@@ -24,7 +25,7 @@ export function renderGhost(ghost) {
         ghostDiv.classList.add('poof');
     }
 
-    ghostDiv.append(ghostDataEl, ghostImgEl);
+    ghostDiv.append(ghostNameEl, ghostHPEl, ghostImgEl);
 
     return ghostDiv;
 

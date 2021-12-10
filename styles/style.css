@@ -1,3 +1,11 @@
+body, html {
+    border: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 body {
     background-image: url(../assets/tree.png);
     background-size: 85%;
@@ -5,7 +13,6 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    
     
 }
 
@@ -87,8 +94,18 @@ form {
     color: gainsboro;
     font-family: cursive;
     font-size: 16px;
+    display: inline-flex;
 }
 
-.poof {
-    pointer-events: none;
+.ghost-hp {
+    color: yellow;
+    border: yellow 1px solid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.ghost-name {
+    width: fit-content;
+    height: fit-content;
+  
 }
