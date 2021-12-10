@@ -1,7 +1,7 @@
 body {
     background-image: url(../assets/tree.png);
     background-size: 85%;
-    background-color: darkslategrey;
+    background-color: rgb(48, 55, 82);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -32,10 +32,11 @@ main {
 }
 
 .dog img {
-    width: 17%;
+    width: 16%;
     height: auto;
     position: absolute;
     bottom: 2px;
+    opacity: .96;
     
 }
 

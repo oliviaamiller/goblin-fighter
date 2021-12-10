@@ -69,14 +69,14 @@ function displayGhosts() {
 
         if (ghost.hp > 0) {
             eachGhost.addEventListener('click', () => {
-                if (Math.random() < .4) { 
+                if (Math.random() < .5) { 
                     ghost.hp--;
                     alert(`You zapped ${ghost.name}!`);
                 } else {
                     alert(`You tried to strike ${ghost.name} but missed, try again!`);
                 }
 
-                if (Math.random() < .6) {
+                if (Math.random() < .3) {
                     playerHP--;
                     alert(`You got spooked by ${ghost.name}!`);
                 } else {
@@ -86,6 +86,10 @@ function displayGhosts() {
                 if (playerHP === 0) {
                     dogImgEl.classList.add('game-over');
                     alert('GAME OVER :(');
+                }
+
+                if (ghost.hp === 0) {
+                    defeatedGhostsCount++;
                 }
 
                 dogHPEl.textContent = playerHP;
