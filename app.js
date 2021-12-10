@@ -10,7 +10,7 @@ const form = document.querySelector('form');
 
 // let state
 let defeatedGhostsCount = 0;
-let playerHP = 10;
+let playerHP = 1;
 let ghosts = [
     { name: 'Ron', hp: 2 },
     { name: 'Belinda', hp: 4 }
@@ -78,6 +78,7 @@ function displayGhosts() {
 
                 if (playerHP === 0) {
                     dogImgEl.classList.add('game-over');
+                    dogImgEl.src = './assets/stars.png';
                     alert('GAME OVER :(');
                 }
 
