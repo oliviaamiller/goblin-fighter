@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+import { renderGhost } from './render-utils.js';
+
 const defeatedNumEl = document.querySelector('#defeated-number');
 const defeatedListEl = document.querySelector('.defeated-list');
 const dogImgEl = document.querySelector('#dog-img');

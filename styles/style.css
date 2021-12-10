@@ -2,7 +2,15 @@ body {
     background-image: url(../assets/tree.png);
     background-size: contain;
     background-color: darkslategrey;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
 }
 
 .dog {
@@ -14,17 +22,19 @@ body {
     padding: 5px;
 }
 
-.dog-stats {
+.dog-side {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .dog img {
-    width: 225px;
+    width: 17%;
+    height: auto;
+    position: absolute;
+    bottom: 2px;
+    
 }
 
 
@@ -35,23 +45,22 @@ body {
 
 }
 
-.ghost-stats {
+.ghost-side {
     width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 }
 
-.ghost-stats input, .ghost-stats button {
-    height: 100px;
+
+.ghost-img {
+    width: 17%;
+    height: auto;
+    cursor: pointer;
 }
 
-.ghost-stats button {
-    font-size: 2em;
-}
-.ghost-stats input {
-    font-size: 3rem;
-    width: 80%
+.player-data {
+    color: gainsboro;
 }
