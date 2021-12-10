@@ -2,7 +2,6 @@
 import { renderGhost } from './render-utils.js';
 
 const defeatedNumEl = document.querySelector('#defeated-number');
-const defeatedListEl = document.querySelector('.defeated-list');
 const dogImgEl = document.querySelector('#dog-img');
 const dogHPEl = document.querySelector('#dog-hp');
 const ghostsEl = document.querySelector('.ghosts');
@@ -48,14 +47,6 @@ form.addEventListener('submit', (e) => {
     displayGhosts();
   
 });
-
-//     "update a list"
-  //     clear out the list DOM
-  //     loop through the goblins
-  //     render a new goblin DOM element for each item
-  //     append that element to the HTML
-
-
 
 
 function displayGhosts() {

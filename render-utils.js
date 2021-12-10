@@ -19,6 +19,10 @@ export function renderGhost(ghost) {
         ghostImgEl.src = '../assets/ghost.png';
     }
 
+    if (ghost.hp < 0) {
+        ghostDiv.classList.add('poof');
+    }
+
     ghostDiv.append(ghostNameEl, ghostHPEl, ghostImgEl);
 
     return ghostDiv;

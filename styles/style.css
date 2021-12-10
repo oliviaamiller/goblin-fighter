@@ -15,15 +15,6 @@ main {
     padding: 20px;
 }
 
-.dog {
-    color: yellow;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family:sans-serif;
-    text-align: center;
-    padding: 5px;
-}
-
 .dog-side {
     width: 50%;
     display: flex;
@@ -35,18 +26,55 @@ main {
     width: 16%;
     height: auto;
     position: absolute;
-    bottom: 2px;
+    bottom: 2%;
     opacity: .96;
+    margin-left: 10%;
     
+}
+
+.player-data {
+    color: gainsboro;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+#defeated-number, #dog-hp {
+    color: yellow;
+    border: yellow .5px solid;
+    padding: 3px;
+    margin: 3px;
 }
 
 .ghost-side {
     width: 50%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     justify-content: right;
-    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ghost-side button {
+    background-color: rgb(48, 55, 82);
+    color: yellow;
+    border: yellow 1px solid;
+    padding: 5px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.ghost-side input {
+    background-color: rgb(48, 55, 82);
+    color: gainsboro;
+    border: gainsboro 1px solid;
+    padding: 5px;
+    margin-right: 5px;
 }
 
 .ghost-img {
@@ -55,10 +83,10 @@ main {
     cursor: pointer;
 }
 
-.player-data {
+.ghost-div {
     color: gainsboro;
 }
 
-.ghost-div {
-    color: gainsboro;
+.poof {
+    cursor: none;
 }
