@@ -4,3 +4,54 @@ body {
     background-color: darkslategrey;
     
 }
+
+.dog {
+    color: yellow;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family:sans-serif;
+    text-align: center;
+    padding: 5px;
+}
+
+.dog-stats {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dog img {
+    width: 225px;
+}
+
+
+.dog p {
+    background-color: darkslateblue;
+    border-radius: 15px;
+    padding: 20px
+
+}
+
+.ghost-stats {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ghost-stats input, .ghost-stats button {
+    height: 100px;
+}
+
+.ghost-stats button {
+    font-size: 2em;
+}
+.ghost-stats input {
+    font-size: 3rem;
+    width: 80%
+}
