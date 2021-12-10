@@ -12,9 +12,19 @@ const form = document.querySelector('form');
 let defeatedGhostsCount = 0;
 let playerHP = 10;
 let ghosts = [
-    { name: 'Ron', hp: 2 },
-    { name: 'Belinda', hp: 4 }
+    { 
+        name: 'Ron', 
+        hp: 2, 
+        strength: 1
+    },
+    { 
+        name: 'Belinda', 
+        hp: 4,
+        strength: 3 
+    }
 ];
+
+
 
 
 
@@ -75,7 +85,7 @@ function displayGhosts() {
                     alert(`You tried to strike ${ghost.name} but missed, try again!`);
                 }
 
-                if (Math.random() < .3) {
+                if (Math.random() < .4) {
                     playerHP--;
                     alert(`You got spooked by ${ghost.name}!`);
                 } else {
