@@ -24,7 +24,7 @@ let ghosts = [
         hp: 4,
         strength: 2,
         agility: 1,
-        dexterity: 3,
+        dexterity: 2,
     }
 ];
 
@@ -48,7 +48,8 @@ form.addEventListener('submit', (e) => {
         name: ghostName,
         hp: 3,
         strength: Math.ceil(Math.random() * 3),
-        agility: Math.ceil(Math.random() * 2)
+        agility: Math.ceil(Math.random() * 2),
+        dexterity: Math.ceil(Math.random() * 2),
     };
 
   //     Add that object to the array of goblins in state
@@ -99,22 +100,48 @@ function displayGhosts() {
                 }
 
 
-                if (Math.random() < .4) {
-                    if (ghost.strength === 2) {
-                        playerHP -= 2;
+                if (ghost.dexterity === 1) {
+                    if (Math.random() < .2) {
+                        if (ghost.strength === 2) {
+                            playerHP -= 2;
+                        }
+        
+                        if (ghost.strength === 3) {
+                            playerHP -= 3;
+                        }
+        
+                        if (ghost.strength === 1) {
+                            playerHP --;
+                        }
+                        alert(`You got spooked by ${ghost.name}!`);
+                    } else {
+                        alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
                     }
-    
-                    if (ghost.strength === 3) {
-                        playerHP -= 3;
-                    }
-    
-                    if (ghost.strength === 1) {
-                        playerHP --;
-                    }
-                    alert(`You got spooked by ${ghost.name}!`);
-                } else {
-                    alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
+                    console.log(ghost.dexterity);
+
                 }
+
+                if (ghost.dexterity === 2) {
+                    if (Math.random() < .4) {
+                        if (ghost.strength === 2) {
+                            playerHP -= 2;
+                        }
+        
+                        if (ghost.strength === 3) {
+                            playerHP -= 3;
+                        }
+        
+                        if (ghost.strength === 1) {
+                            playerHP --;
+                        }
+                        alert(`You got spooked by ${ghost.name}!`);
+                    } else {
+                        alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
+                    }
+                    console.log(ghost.dexterity);
+                }
+
+                
 
                 if (playerHP === 0) {
                     dogImgEl.classList.add('game-over');
