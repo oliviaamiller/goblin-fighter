@@ -15,12 +15,16 @@ let ghosts = [
     { 
         name: 'Ron', 
         hp: 2, 
-        strength: 1
+        strength: 1,
+        agility: 2,
+        dexterity: 1,
     },
     { 
         name: 'Belinda', 
         hp: 4,
-        strength: 2
+        strength: 2,
+        agility: 1,
+        dexterity: 3,
     }
 ];
 
@@ -43,7 +47,8 @@ form.addEventListener('submit', (e) => {
     const newGhost = {
         name: ghostName,
         hp: 3,
-        strength: Math.ceil(Math.random() * 3)
+        strength: Math.ceil(Math.random() * 3),
+        agility: Math.ceil(Math.random() * 2)
     };
 
   //     Add that object to the array of goblins in state
@@ -73,12 +78,26 @@ function displayGhosts() {
 
         if (ghost.hp > 0) {
             eachGhost.addEventListener('click', () => {
-                if (Math.random() < .5) { 
-                    ghost.hp--;
-                    alert(`You zapped ${ghost.name}!`);
-                } else {
-                    alert(`You tried to strike ${ghost.name} but missed, try again!`);
+                if (ghost.agility === 1) {
+                    if (Math.random() < .5) { 
+                        ghost.hp--;
+                        alert(`You zapped ${ghost.name}!`);
+                    } else {
+                        alert(`You tried to strike ${ghost.name} but missed, try again!`);
+                    }
+
                 }
+
+                if (ghost.agility === 2) {
+                    if (Math.random() < .25) { 
+                        ghost.hp--;
+                        alert(`You zapped ${ghost.name}!`);
+                    } else {
+                        alert(`You tried to strike ${ghost.name} but missed, try again!`);
+                    }
+
+                }
+
 
                 if (Math.random() < .4) {
                     if (ghost.strength === 2) {
