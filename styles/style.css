@@ -156,6 +156,18 @@ form {
     margin-top: 20px;
 }
 
+.data-div p {
+    padding: 0;
+    margin: 1px;
+}
+
+.colored-squares-div {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-right: 5px;
+}
+
 .ghost-hp {
     color: yellow;
     border: yellow 1px solid;
@@ -191,7 +203,8 @@ form {
 .ghost-name {
     width: fit-content;
     height: fit-content;
-    margin-right: 5px;
+    padding: 0;
+    margin: 0;
 }
 
 .game-over {

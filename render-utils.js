@@ -1,5 +1,7 @@
 export function renderGhost(ghost) {
     const ghostDiv = document.createElement('div');
+    const dataDiv = document.createElement('div');
+    const coloredSquaresDiv = document.createElement('div');
     const ghostImgEl = document.createElement('img');
     const ghostNameEl = document.createElement('p');
     const ghostHPEl = document.createElement('p');
@@ -9,6 +11,8 @@ export function renderGhost(ghost) {
 
 
     ghostDiv.classList.add('ghost-div');
+    dataDiv.classList.add('data-div');
+    coloredSquaresDiv.classList.add('colored-squares-div');
     ghostNameEl.classList.add('ghost-name');
     ghostImgEl.classList.add('ghost-img');
     ghostHPEl.classList.add('ghost-hp');
@@ -29,7 +33,9 @@ export function renderGhost(ghost) {
 
     }
 
-    ghostDiv.append(ghostNameEl, ghostHPEl, strengthEl, agilityEl, dexterityEl, ghostImgEl);
+    ghostDiv.append(dataDiv, ghostImgEl);
+    dataDiv.append(ghostNameEl, coloredSquaresDiv);
+    coloredSquaresDiv.append(ghostHPEl, strengthEl, agilityEl, dexterityEl);
 
     return ghostDiv;
 
