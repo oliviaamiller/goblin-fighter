@@ -102,6 +102,14 @@ footer p {
     margin: 3px;
 }
 
+#dog-strength {
+    color: rgb(245, 29, 29);
+    font-size: 35px;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+}
+
 #defeated-number {
     font-size: 35px;
     font-weight: bold;
