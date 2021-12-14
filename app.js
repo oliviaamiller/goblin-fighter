@@ -17,16 +17,16 @@ let ghosts = [
     { 
         name: 'Ron', 
         hp: 2, 
-        strength: 1,
-        agility: 2,
-        dexterity: 1,
+        // strength: 1,
+        // agility: 2,
+        // dexterity: 1,
     },
     { 
         name: 'Belinda', 
         hp: 4,
-        strength: 2,
-        agility: 1,
-        dexterity: 2,
+        // strength: 2,
+        // agility: 1,
+        // dexterity: 2,
     }
 ];
 
@@ -150,43 +150,43 @@ function displayGhosts() {
                 }
 
 
-                // if (ghost.dexterity === 1) {
-                //     if (Math.random() < .2) {
-                //         if (ghost.strength === 2) {
-                //             playerHP -= 2;
-                //         }
+                if (ghost.dexterity === 1) {
+                    if (Math.random() < .2) {
+                        if (ghost.strength === 2) {
+                            playerHP -= 2;
+                        }
         
-                //         if (ghost.strength === 3) {
-                //             playerHP -= 3;
-                //         }
+                        if (ghost.strength === 3) {
+                            playerHP -= 3;
+                        }
         
-                //         if (ghost.strength === 1) {
-                //             playerHP --;
-                //         }
-                //         alert(`You got spooked by ${ghost.name}!`);
-                //     } else {
-                //         alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
-                //     }
-                // }
+                        if (ghost.strength === 1) {
+                            playerHP --;
+                        }
+                        alert(`You got spooked by ${ghost.name}!`);
+                    } else {
+                        alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
+                    }
+                }
 
-                // if (ghost.dexterity === 2) {
-                //     if (Math.random() < .4) {
-                //         if (ghost.strength === 2) {
-                //             playerHP -= 2;
-                //         }
+                if (ghost.dexterity === 2) {
+                    if (Math.random() < .4) {
+                        if (ghost.strength === 2) {
+                            playerHP -= 2;
+                        }
         
-                //         if (ghost.strength === 3) {
-                //             playerHP -= 3;
-                //         }
+                        if (ghost.strength === 3) {
+                            playerHP -= 3;
+                        }
         
-                //         if (ghost.strength === 1) {
-                //             playerHP --;
-                //         }
-                //         alert(`You got spooked by ${ghost.name}!`);
-                //     } else {
-                //         alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
-                //     }
-                // }
+                        if (ghost.strength === 1) {
+                            playerHP --;
+                        }
+                        alert(`You got spooked by ${ghost.name}!`);
+                    } else {
+                        alert(`${ghost.name} tried to scare you but you're one tough doggie!`);
+                    }
+                }
                 
 
                 if (playerHP <= 0) {
