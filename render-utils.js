@@ -27,9 +27,9 @@ export function renderGhost(ghost) {
     // dexterityEl.textContent = ghost.dexterity;
 
     if (ghost.hp === 0) {
-        ghostImgEl.src = '../assets/poof.png';
+        ghostImgEl.src = './assets/poof.png';
     } else {
-        ghostImgEl.src = '../assets/ghost.png';
+        ghostImgEl.src = './assets/ghost.png';
 
     }
 

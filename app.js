@@ -81,7 +81,7 @@ function displayGhosts() {
 
         eachGhost.addEventListener('click', () => {
 
-            if (Math.random() < .33) {
+            if (Math.random() < .5) {
                 ghost.hp--;
                 alert(`You zapped ${ghost.name}!`);
             } else {

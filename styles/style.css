@@ -23,11 +23,10 @@ main {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
+    position: fixed;
+    right: 0;
     bottom: 2%;
-    margin-left: 80%;
+    margin-right: 20px;
     color: gainsboro;
     border: gainsboro 1px solid;
     font-family: sans-serif;
@@ -49,7 +48,7 @@ footer p {
     color: yellow;
     border: yellow 1px solid;
     margin-right: 5px;
-
+    padding: 2px;
 }
 
 .key-strength {
@@ -148,7 +147,7 @@ form {
 }
 
 .ghost-img {
-    width: 80%;
+    width: 70%;
     height: auto;
     cursor: pointer;
     opacity: .8;
@@ -157,7 +156,7 @@ form {
 .ghost-div {
     color: gainsboro;
     font-family: cursive;
-    font-size: 16px;
+    font-size: 18px;
     display: inline-flex;
     width: 40%;
     padding: 40px;
@@ -174,13 +173,14 @@ form {
     flex-direction: row;
     padding: 0;
     margin-right: 5px;
+    
 }
 
 .ghost-hp {
     color: yellow;
-    border: yellow 1px solid;
-    width: fit-content;
-    height: fit-content;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
     margin-right: 5px;
 }
 
