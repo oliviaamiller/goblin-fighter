@@ -22,6 +22,53 @@ main {
     padding: 20px;
 }
 
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 2%;
+    margin-right: 20px;
+    color: gainsboro;
+    border: gainsboro 1px solid;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+}  
+
+footer p {
+    padding: 0;
+    margin: 5px;
+}
+
+.key {
+    display: flex;
+    flex-direction: row;
+}
+
+.key-hp {
+    color: yellow;
+    border: yellow 1px solid;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.key-strength {
+    color: rgb(245, 29, 29);
+    border: rgb(245, 29, 29) 1px solid;
+    margin-right: 5px;
+}
+
+.key-agility {
+    color: rgb(29, 195, 245);
+    border: rgb(29, 195, 245) 1px solid;
+    margin-right: 5px;
+}
+
+.key-dexterity {
+    color: rgb(255, 126, 244);
+    border: rgb(255, 126, 244) 1px solid;
+    margin-right: 5px;
+}
+
 .dog-side {
     width: 50%;
     display: flex;
@@ -35,8 +82,7 @@ main {
     position: absolute;
     bottom: 2%;
     opacity: .96;
-    margin-left: 10%;
-    
+    margin-left: 10%;   
 }
 
 .player-data {
@@ -44,14 +90,29 @@ main {
     font-family: sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
+    font-size: 25px;
 }
 
-#defeated-number, #dog-hp {
+#dog-hp {
     color: yellow;
-    border: yellow .5px solid;
+    font-size: 35px;
+    font-weight: bold;
     padding: 3px;
     margin: 3px;
 }
+
+#dog-strength {
+    color: rgb(245, 29, 29);
+    font-size: 35px;
+    font-weight: bold;
+    padding: 3px;
+    margin: 3px;
+}
+
+#defeated-number {
+    font-size: 35px;
+    font-weight: bold;
+} 
 
 .ghost-side {
     width: 50%;
@@ -86,24 +147,62 @@ form {
 }
 
 .ghost-img {
-    width: 80%;
+    width: 70%;
     height: auto;
     cursor: pointer;
+    opacity: .8;
 }
 
 .ghost-div {
     color: gainsboro;
     font-family: cursive;
-    font-size: 16px;
+    font-size: 18px;
     display: inline-flex;
-    width: 30%;
-    padding: 20px;
+    width: 40%;
+    padding: 40px;
     margin-top: 20px;
+}
+
+.data-div p {
+    padding: 0;
+    margin: 1px;
+}
+
+.colored-squares-div {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-right: 5px;
+    
 }
 
 .ghost-hp {
     color: yellow;
-    border: yellow 1px solid;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.ghost-strength {
+    color: rgb(245, 29, 29);
+    border: rgb(245, 29, 29) 1px solid;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 5px;
+}
+
+.ghost-agility {
+    color: rgb(29, 195, 245);
+    border: rgb(29, 195, 245) 1px solid;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 5px;
+}
+
+.ghost-dexterity {
+    color: rgb(255, 126, 244);
+    border: rgb(255, 126, 244) 1px solid;
     width: fit-content;
     height: fit-content;
     margin-right: 5px;
@@ -112,5 +211,10 @@ form {
 .ghost-name {
     width: fit-content;
     height: fit-content;
-    margin-right: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.game-over {
+    margin-bottom: 80px;
 }
